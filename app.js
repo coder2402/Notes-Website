@@ -26,7 +26,7 @@ addbtn.addEventListener("click", function (e) {
     shownotes();
 })
 
-// This function is made to display notes 
+// This function is made to display notes from the local storage
 function shownotes() {
     let notes = localStorage.getItem("notes");
     if (notes == null) {
@@ -55,7 +55,7 @@ function shownotes() {
     }
 }
 
-// This function is made for deleting a note
+// This function is made for deleting a note from the local storage
 function deletenotes(index) {
     let notes = localStorage.getItem("notes");
     if (notes == null) {
@@ -69,7 +69,7 @@ function deletenotes(index) {
     shownotes();
 }
 
-// This is a function for search by text
+// This is a function for search by text from the local storage
 let searchtxt = document.getElementById('searchtxt');
 searchtxt.addEventListener("input", function () {
     let inputval = searchtxt.value;
@@ -85,7 +85,7 @@ searchtxt.addEventListener("input", function () {
     })
 })
 
-// This is a function for search by title
+// This is a function for search by title from the local storage
 let searchtitle = document.getElementById('searchtitle');
 searchtitle.addEventListener("input", function () {
     let inputval = searchtitle.value;
