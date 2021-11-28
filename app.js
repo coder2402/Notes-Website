@@ -1,3 +1,4 @@
+// This is printed in console to check whether app.js is included or not
 console.log("Hello");
 // displaying last saved notes after the page is refreshed
 shownotes();
@@ -25,7 +26,7 @@ addbtn.addEventListener("click", function (e) {
     shownotes();
 })
 
-// displaying notes 
+// This function is made to display notes 
 function shownotes() {
     let notes = localStorage.getItem("notes");
     if (notes == null) {
@@ -54,7 +55,7 @@ function shownotes() {
     }
 }
 
-// deleting a notes
+// This function is made for deleting a note
 function deletenotes(index) {
     let notes = localStorage.getItem("notes");
     if (notes == null) {
@@ -68,7 +69,7 @@ function deletenotes(index) {
     shownotes();
 }
 
-// search by text
+// This is a function for search by text
 let searchtxt = document.getElementById('searchtxt');
 searchtxt.addEventListener("input", function () {
     let inputval = searchtxt.value;
@@ -84,7 +85,7 @@ searchtxt.addEventListener("input", function () {
     })
 })
 
-// search by title
+// This is a function for search by title
 let searchtitle = document.getElementById('searchtitle');
 searchtitle.addEventListener("input", function () {
     let inputval = searchtitle.value;
